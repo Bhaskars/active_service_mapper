@@ -1,6 +1,6 @@
 # ActiveServiceMapper
 
-TODO: Write a gem description
+This gem will convert the json responses received from the web services to ruby hash.
 
 ## Installation
 
@@ -17,8 +17,24 @@ Or install it yourself as:
     $ gem install active_service_mapper
 
 ## Usage
+      #service response in jso format 
+      
+      1. response = {"FirstName"=>"Bob", "LastName"=>"Newhart"}
+      
+      # convert the json response to a hash with symbols.
+      
+      2. response = Person.convert_response(response)
 
-TODO: Write usage instructions here
+      3. puts response #{:first_name=>"Bob", :last_name=>"Newhart"}
+   
+        
+     4. we can use plain_old_model gem and the person calss can be 
+    
+    class Person < PlainOldModel::Base
+      attr_accessor :first_name, :last_name
+    end
+
+     5. @person = Person.new(response)
 
 ## Contributing
 
