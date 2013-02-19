@@ -35,6 +35,10 @@ Or install it yourself as:
     end
 
      5. @person = Person.new(response)
+     
+## TODO
+    # add complex mapping, i.e when the service response keys are different from the class attribute names.
+    # 
 
 ## Contributing
 
